@@ -16,7 +16,7 @@ def search(query: str) -> None:
             for item in hit:
                 info = item.get("info", {})
                 title = info.get("title", "No title found")
-                output += f"{title} ({info.get('url').replace("https://dblp.org/rec/", "")})\n"
+                output += f"{title} ({info.get('url').replace('https://dblp.org/rec/', '')})\n"
         else:
             print("No results found in DBLP")
     print(output.strip())
